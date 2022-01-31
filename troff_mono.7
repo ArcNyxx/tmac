@@ -1,0 +1,34 @@
+.TH troff_mono 7 "January 31, 2022"
+.SH NAME
+troff_mono \- "mono" macro package for formatting documents with troff
+.SH SYNOPSIS
+\fBtroff -mono\fR \fIfile\fR ...
+.SH DESCRIPTION
+The \fImono\fR package of macro definitions for the \fIroff\fR language
+provides a simple output format for miscellaneous documents.
+.PP
+Pagination is applied automatically with the use of this macro package, however
+the macros are still listed for the sake of completeness.  Alongside the traps
+set, the font is changed to be monospaced, the margins are set to 1 inch, and
+paragraph indentation is set to 0.5 inches.
+.TS
+;
+l lx .
+\fB.hd\fR	T{
+start page by applying spacing
+trapped at beginning of each page
+T}
+\fB.fo\fR	T{
+end page by applying pagination and spacing
+trapped at bottom margin of each page
+T}
+\fB.pg\fR	T{
+begin paragraph
+T}
+.TE
+.SH FILES
+TMAC_FOLDER/ono.tmac
+.SH SEE ALSO
+\fBtroff\fR(1), \fBtroff_mla\fR(7)
+.SH AUTHOR
+FearlessDoggo21

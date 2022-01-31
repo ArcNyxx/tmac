@@ -1,0 +1,44 @@
+.TH troff_mla 7 "January 31, 2022"
+.SH NAME
+troff_mla \- "mla" macro package for formatting documents with troff
+.SH SYNOPSIS
+\fBtroff -mla\fR \fIfile\fR ...
+.SH DESCRIPTION
+The \fImla\fR package of macro definitions for the \fIroff\fR language provides
+a convenient facility for preparing MLA formatted documents.  The MLA
+specification defines page margins of exactly 1 inch, paragraph indents and
+hanging indents (for citations) of exactly 0.5 inches, centred titles and
+specific page headers, and named pagination.
+.PP
+Pagination is applied automatically with the use of this macro package, however
+the macros are still listed for the sake of completeness.  Alongside the traps
+set, the font size and vertical spacing are set to 12 point and double
+respectively, and output justification and hyphenation are both disabled.
+.TS
+;
+l lx .
+\fB.hd\fR	T{
+start page by applying pagination and spacing
+trapped at beginning of each page
+T}
+\fB.fo\fR	T{
+end page by applying spacing
+trapped at bottom margin of each page
+T}
+\fB.pg\fR	T{
+begin paragraph
+T}
+\fB.tt\fR	T{
+begin centered title
+T}
+\fB.ci\fR	T{
+begin hanging indent region
+used for citations or headers
+T}
+.TE
+.SH FILES
+TMAC_FOLDER/la.tmac
+.SH SEE ALSO
+\fBtroff\fR(1), \fBtroff_mono\fR(7)
+.SH AUTHOR
+FearlessDoggo21

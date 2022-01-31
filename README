@@ -1,0 +1,5 @@
+tmac - troff macro package files
+================================
+A number of tmac files for miscellaneous troff formatting. These macro packages
+are personally useful, thus this repository is not meant to be comprehensive or
+highly maintained in any way. Manual pages are provided for ease of use.
