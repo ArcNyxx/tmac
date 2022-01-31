@@ -6,16 +6,21 @@
 
 include config.mk
 
-all: tmac man
+options:
+	@echo "tmac:      installs macro packages"
+	@echo "man:       installs man pages"
+	@echo "dist:      packages repository for distribution"
+	@echo "install:   installs both macro packages and man pages"
+	@echo "uninstall: uninstalls both macro pages and man pages"
 
 tmac:
 	cp import.mla.tr $(DESTDIR)$(TMAC_FOLDER)/la.tmac
 	cp import.mono.tr $(DESTDIR)$(TMAC_FOLDER)/ono.tmac
 
 man:
-	sed "s/TMAC_FOLDER/$(TMAC_FOLDER)/g" < troff_mla.7 > \
+	sed "s|TMAC_FOLDER|$(TMAC_FOLDER)|g" < troff_mla.7 > \
 		$(DESTDIR)$(MANPREFIX)/man7/troff_mla.7
-	sed "s/TMAC_FOLDER/$(TMAC_FOLDER)/g" < troff_mono.7 > \
+	sed "s|TMAC_FOLDER|$(TMAC_FOLDER)|g" < troff_mono.7 > \
 		$(DESTDIR)$(MANPREFIX)/man7/troff_mono.7
 
 dist:
@@ -25,6 +30,8 @@ dist:
 	tar -cf tmac-$(VERSION).tar tmac-$(VERSION)
 	gzip tmac-$(VERSION).tar
 	rm -rf tmac-$(VERSION)
+
+install: tmac man
 
 uninstall:
 	rm -f $(DESTDIR)$(TMAC_FOLDER)/la.tmac $(DESTDIR)$(TMAC_FOLDER)/ono.tmac \
