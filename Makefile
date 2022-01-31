@@ -14,8 +14,8 @@ options:
 	@echo "uninstall: uninstalls both macro pages and man pages"
 
 tmac:
-	cp import.mla.tr $(DESTDIR)$(TMAC_FOLDER)/la.tmac
-	cp import.mono.tr $(DESTDIR)$(TMAC_FOLDER)/ono.tmac
+	cp import.mla.tr $(DESTDIR)$(TMAC_FOLDER)/la
+	cp import.mono.tr $(DESTDIR)$(TMAC_FOLDER)/ono
 
 man:
 	sed "s|TMAC_FOLDER|$(TMAC_FOLDER)|g" < troff_mla.7 > \

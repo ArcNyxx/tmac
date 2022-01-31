@@ -11,4 +11,4 @@ MANPREFIX = $(PREFIX)/share/man
 TMAC_FOLDER = /usr/share/groff/1.22.4/tmac
 
 # if using heirloom doctools, set to following
-# TMAC_FOLDER = /usr/local/ucblib/doctools/tmac/
+# TMAC_FOLDER = /usr/local/ucblib/doctools/tmac
