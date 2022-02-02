@@ -16,11 +16,14 @@ options:
 tmac:
 	cp la.tmac $(DESTDIR)$(TMAC_FOLDER)/la
 	cp ono.tmac $(DESTDIR)$(TMAC_FOLDER)/ono
+	chmod 644 $(DESTDIR)$(TMAC_FOLDER)/la $(DESTDIR)$(TMAC_FOLDER)/ono
 
 man:
 	sed "s|TMAC_FOLDER|$(TMAC_FOLDER)|g" < troff_mla.7 > \
 		$(DESTDIR)$(MANPREFIX)/man7/troff_mla.7
 	sed "s|TMAC_FOLDER|$(TMAC_FOLDER)|g" < troff_mono.7 > \
+		$(DESTDIR)$(MANPREFIX)/man7/troff_mono.7
+	chmod 644 $(DESTDIR)$(MANPREFIX)/man7/troff_mla.7 \
 		$(DESTDIR)$(MANPREFIX)/man7/troff_mono.7
 
 dist:

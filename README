@@ -3,3 +3,19 @@ tmac - troff macro package files
 A number of tmac files for miscellaneous troff formatting. These macro packages
 are personally useful, thus this repository is not meant to be comprehensive or
 highly maintained in any way. Manual pages are provided for ease of use.
+
+Requirements
+------------
+In order to install tmac, you need a functioning implementation of troff, such
+as groff or the heirloom doctools, installed.
+
+Installation
+------------
+Edit config.mk to match your local setup.
+
+Afterwards, enter the following command to install the macro packages (if
+necessary, as root):
+
+    make install
+
+
