@@ -1,0 +1,40 @@
+.\" troff_mla - troff macros for mla formatted documents
+.\" Copyright (C) 2022 FearlessDoggo21
+.\" see LICENCE file for licensing information
+.
+.de hd
+.rs
+'sp 1i-1
+..
+.de fo
+'bp
+.ns
+..
+.de ht
+.ps 16
+.ft B
+.ce
+\\$1
+.re
+..
+.de mt
+.ps 13
+.ft B
+.ce
+\\$1
+.re
+..
+.de st
+.br
+\\(em \\$1
+..
+.de re
+.ft R
+.ss 12
+.ps 10
+..
+.wh 0 hd
+.wh -1i fo
+.
+.in 0
+.ns
