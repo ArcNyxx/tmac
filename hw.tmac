@@ -2,35 +2,34 @@
 .\" Copyright (C) 2022 FearlessDoggo21
 .\" see LICENCE file for licensing information
 .
-.de hd
-.rs
-'sp 1i-1
+.de hd         \" Page Header
+.rs            \" Enable spacing
+'sp 1i-1       \" Move 1in
 ..
-.de fo
-'bp
-.ns
+.de fo         \" Page Footer
+'bp            \" Begin a new page, reset spacing
+.ns            \" Disable spacing while aligning
 ..
-.de ht
-.in 0
-.ss 20
-.ps 16
-.ft B
+.de ht         \" Header Starter
+.in 0          \" Reset indentation
+.ft B          \" Define font
+.ss 20         \" Define vertical spacing
+.ps 16         \" Define font size
 ..
-.de mt
-.in 0
-.ss 16
-.ps 13
-.ft B
+.de mt         \" Section Header Starter
+.in 0          \" Reset indentation
+.ft B          \" Define font
+.ss 16         \" Define vertical spacing
+.ps 13         \" Define font size
 ..
-.de st
-.br
-.ss 14
-.ps 12
-.ft R
-.in \w'\(em 'u
-.ti 0
-\\(em\ \c
+.de st         \" Note Starter
+.br            \" Break for new line
+.in \w'\(em 'u \" Reset indentation
+.ft R          \" Define font
+.ss 14         \" Define vertical spacing
+.ps 12         \" Define font size
+.ti 0          \" Write mdash at side
+\\(em\ \c      \" Extra space and wrapper to prevent mdash adjustment
 ..
-.wh 0 hd
-.wh -1i fo
-.ad n
+.wh 0 hd       \" Trigger header on new page
+.wh -1i fo     \" Trigger footer (new page) on bottom margin
