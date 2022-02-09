@@ -1,4 +1,4 @@
-.\" troff_mla - troff macros for mla formatted documents
+.\" troff_hw - troff macros for generated homework documents
 .\" Copyright (C) 2022 FearlessDoggo21
 .\" see LICENCE file for licensing information
 .
@@ -11,30 +11,26 @@
 .ns
 ..
 .de ht
+.in 0
+.ss 20
 .ps 16
 .ft B
-.ce
-\\$1
-.re
 ..
 .de mt
+.in 0
+.ss 16
 .ps 13
 .ft B
-.ce
-\\$1
-.re
 ..
 .de st
 .br
-\\(em \\$1
-..
-.de re
+.ss 14
+.ps 12
 .ft R
-.ss 12
-.ps 10
+.in \w'\(em 'u
+.ti 0
+\\(em\ \c
 ..
 .wh 0 hd
 .wh -1i fo
-.
-.in 0
-.ns
+.ad n

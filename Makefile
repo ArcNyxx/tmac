@@ -19,8 +19,8 @@ options:
 tmac:
 	for PACK in $(TMAC); do \
 		BASE="$$(echo "$$PACK" | rev | cut -d. -f2- | rev)"; \
-		cp "$$PACK" "$(DESTDIR)$(TMACPREFIX)$$BASE"; \
-		chmod 644 "$(DESTDIR)$(TMACPREFIX)$$BASE"; \
+		cp "$$PACK" "$(DESTDIR)$(TMACPREFIX)/$$BASE"; \
+		chmod 644 "$(DESTDIR)$(TMACPREFIX)/$$BASE"; \
 	done
 
 man:
