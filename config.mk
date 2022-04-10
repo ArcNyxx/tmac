@@ -2,7 +2,7 @@
 # Copyright (C) 2022 FearlessDoggo21
 # see LICENCE file for licensing information
 
-VERSION = 0.0.0
+VERSION = 1.0.0
 
 PREFIX = /usr/local
 MANPREFIX = $(PREFIX)/share/man

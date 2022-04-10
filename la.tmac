@@ -2,33 +2,33 @@
 .\" Copyright (C) 2022 FearlessDoggo21
 .\" see LICENCE file for licensing information
 .
-.de hd              \" Page Header
-.rs                 \" Enable spacing to properly position title
-'sp 0.5i-1          \" Move 0.5in
-.tl ```Last Name %` \" Right-justified title with last name and page number
-'sp 0.5i-1          \" Move 0.5in
+.de hd           \" Page Header
+.rs              \" Enable spacing to properly position title
+'sp 0.5i-1       \" Move 0.5in
+.tl ```\\*(nm %` \" Right-justified title with last name and page number
+'sp 0.5i-1       \" Move 0.5in
 ..
-.de fo              \" Page Footer
-'bp                 \" Begin a new page, reset spacing
-.ns                 \" Disable spacing while aligning
+.de fo           \" Page Footer
+'bp              \" Begin a new page, reset spacing
+.ns              \" Disable spacing while aligning
 ..
-.de pg              \" Paragraph Starter
-.ns                 \" Turn off no-space mode to reject vertical space
-.in 0               \" Reset indentation
-.ti 0.5i            \" Indent first line 0.5in
+.de pg           \" Paragraph Starter
+.ns              \" Turn off no-space mode to reject vertical space
+.in 0            \" Reset indentation
+.ti 0.5i         \" Indent first line 0.5in
 ..
-.de tt              \" Centred Title
-.in 0               \" Reset indentation prior to centering request
-.ce                 \" Centre title text
+.de tt           \" Centred Title
+.in 0            \" Reset indentation prior to centering request
+.ce              \" Centre title text
 ..
-.de ci              \" Hanging Indent Citation
-.in 0.5i            \" Reset indentation
-.ti 0               \" Indent first line -0.5in
+.de ci           \" Hanging Indent Citation
+.in 0.5i         \" Reset indentation
+.ti 0            \" Indent first line -0.5in
 ..
-.wh 0 hd            \" Trigger header on new page
-.wh -1i fo          \" Trigger footer (new page) on bottom margin
+.wh 0 hd         \" Trigger header on new page
+.wh -1i fo       \" Trigger footer (new page) on bottom margin
 .
-.ps 12p             \" Define font size
-.vs 29.5p           \" Define vertical spacing
-.na                 \" Disable output justification
-.nh                 \" Disable hyphenation
+.ps 12p          \" Define font size
+.vs 29.5p        \" Define vertical spacing
+.na              \" Disable output justification
+.nh              \" Disable hyphenation
