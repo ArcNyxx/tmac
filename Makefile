@@ -6,8 +6,8 @@
 
 include config.mk
 
-TMAC = la.tmac ono.tmac hw.tmac
-MAN = troff_mla.7 troff_mono.7 troff_hw.7
+TMAC = la.tmac ono.tmac
+MAN = troff_mla.7 troff_mono.7
 
 clean:
 	rm -f tmac-$(VERSION).tar.gz
@@ -26,8 +26,8 @@ install:
 		chmod 644 "$(DESTDIR)$(TMACPREFIX)/$$BASE"; \
 	done
 	for PAGE in $(MAN); do \
-		sed "s|TMACPREFIX|$(TMACPREFIX)|g" < "$$PAGE" > \
-			"$(DESTDIR)$(MANPREFIX)/man7/$$PAGE"; \
+		sed "s|TMACPREFIX|$(TMACPREFIX)|g;s/VERSION/$(VERSION)/g" \
+			< "$$PAGE" > "$(DESTDIR)$(MANPREFIX)/man7/$$PAGE"; \
 		chmod 644 "$(DESTDIR)$(MANPREFIX)/man7/$$PAGE"; \
 	done
 
